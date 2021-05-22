@@ -6,6 +6,9 @@ const routes: Routes = [
   {
     path: '',
     component: DayOneComponent,
+    data: {
+      breadcrumb: 'Day One',
+    },
   },
 ];
 

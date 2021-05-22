@@ -1,4 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute, Data } from '@angular/router';
 
 @Component({
   selector: 'app-day-one',
@@ -6,7 +8,14 @@ import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
   styleUrls: ['./day-one.component.scss'],
 })
 export class DayOneComponent implements OnInit, AfterViewInit {
-  constructor(private elem: ElementRef<HTMLDivElement>) {}
+  constructor(
+    private readonly elem: ElementRef<HTMLDivElement>,
+    private readonly titleService: Title
+  ) {}
+
+  ngOnInit(): void {
+    this.titleService.setTitle('Fifty Projects - Day One');
+  }
 
   ngAfterViewInit(): void {
     const panels = this.elem.nativeElement.querySelectorAll('.panel');
@@ -24,6 +33,4 @@ export class DayOneComponent implements OnInit, AfterViewInit {
 
     clickedPanel.classList.toggle('active');
   }
-
-  ngOnInit(): void {}
 }
