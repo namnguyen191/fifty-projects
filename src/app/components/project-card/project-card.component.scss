@@ -1,66 +1,55 @@
 .card {
   position: relative;
-  margin: 20px;
-  width: 180px;
-  height: 270px;
   overflow: hidden;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
-  transform-origin: center top;
-  transform-style: preserve-3d;
-  transform: translateZ(0);
-  transition: 0.3s;
+  width: 350px;
+  height: 235px;
+  margin: 20px;
+  font-family: "Pattaya", sans-serif;
   cursor: pointer;
-
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: 10;
-    width: 200%;
-    height: 100%;
-    top: -90%;
-    left: -20px;
-    opacity: 0.1;
-    transform: rotate(45deg);
-    background: linear-gradient(
-      to top,
-      transparent,
-      #fff 15%,
-      rgba(255, 255, 255, 0.5)
-    );
-    transition: 0.3s;
-  }
 
   img {
     width: 100%;
     min-height: 100%;
+    transition: 0.2s;
   }
 
   figcaption {
     position: absolute;
-    bottom: 0;
+    font-size: 14px;
+    text-shadow: 0 1px 0 rgba(51, 51, 51, 0.3);
+    color: #fff;
     left: 0;
     right: 0;
-    padding: 20px;
-    padding-bottom: 10px;
-    font-size: 20px;
-    background: none;
-    color: #fff;
-    transform: translateY(100%);
-    transition: 0.3s;
+    top: 0;
+    bottom: 0;
+    padding: 40px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    background: rgba(6, 18, 53, 0.6);
+    opacity: 0;
+    transform: scale(1.15);
+    transition: 0.2s;
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    h3 {
+      color: #3792e3;
+      font-size: 2rem;
+      margin-bottom: 0;
+      font-weight: 400;
+    }
   }
 
   &:hover {
-    box-shadow: 0 8px 16px 3px rgba(0, 0, 0, 0.6);
-    transform: translateY(-3px) scale(1.05) rotateX(15deg);
-
     figcaption {
+      opacity: 1;
       transform: none;
     }
 
-    &::after {
-      transform: rotate(25deg);
-      top: -40%;
-      opacity: 0.15;
+    img {
+      filter: blur(3px);
+      transform: scale(0.97);
     }
   }
 }
