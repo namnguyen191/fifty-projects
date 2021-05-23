@@ -1,0 +1,38 @@
+<div class="day-two-container">
+  <div class="progress-container">
+    <div
+      class="progress"
+      id="progress"
+      [ngStyle]="{
+        width: (activeCircles.length - 1) * (100 / (circles.length - 1)) + '%'
+      }"
+    ></div>
+    <ng-container *ngFor="let circle of circles">
+      <div
+        class="circle"
+        [ngClass]="{ active: activeCircles.includes(circle) }"
+      >
+        {{ circle }}
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="btn-container">
+    <button
+      class="btn"
+      id="pre"
+      [disabled]="activeCircles.length === 1"
+      (click)="onPrevClick()"
+    >
+      Prev
+    </button>
+    <button
+      class="btn"
+      id="next"
+      [disabled]="activeCircles.length === circles.length"
+      (click)="nextClick(circles[activeCircles.length])"
+    >
+      Next
+    </button>
+  </div>
+</div>

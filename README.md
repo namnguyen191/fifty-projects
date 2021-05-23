@@ -5,3 +5,7 @@ Following a Udemy Courses, I will build 50 small projects in 50 days, just for f
 ## Day 1
 
 Expandable cards
+
+## Day 2
+
+Progress Steps
