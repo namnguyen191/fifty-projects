@@ -1,0 +1,63 @@
+<div class="day-three-container">
+  <div
+    #contentcontainer
+    class="content-container"
+    [ngClass]="{ 'show-nav': navState === 'open' }"
+  >
+    <div class="circle-container">
+      <div class="circle">
+        <button id="close" (click)="onCloseClick()">
+          <i class="fas fa-times"></i>
+        </button>
+        <button id="open" (click)="onOpenClick()">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1>Cool Rotating Navigation</h1>
+      <small>Nam Nguyen</small>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
+        perferendis neque pariatur impedit nulla totam unde laboriosam laborum,
+        quae, inventore incidunt similique est optio asperiores nobis,
+        recusandae id. Nobis nisi fugiat dolorem repudiandae numquam alias
+        perferendis atque ducimus quo distinctio pariatur dolorum temporibus,
+        dignissimos maxime velit impedit ex ipsam perspiciatis rem iste
+        excepturi aliquid quis? Dolore, laudantium autem! Quibusdam, iure
+        adipisci! Ipsum quidem repellendus, cupiditate tempore animi omnis eum a
+        est incidunt veritatis id reiciendis dolor ea! Vero soluta praesentium
+        exercitationem quaerat doloribus culpa iusto ratione, obcaecati deleniti
+        commodi explicabo et architecto rem nam iure. Explicabo ratione amet
+        consequatur nesciunt?
+      </p>
+      <h3>My Fish</h3>
+      <img src="assets/images/cool-fish.jpg" alt="My Fish" />
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni at
+        voluptatem perferendis fugiat quo. Inventore labore consequatur sed eum
+        aliquam. Animi recusandae minima voluptas facilis odit, quod voluptatum
+        consequatur dolorum id. Quia, minus. Quia perferendis iusto mollitia
+        quis animi amet? Molestias aut assumenda id voluptas modi ipsum nemo
+        quas alias numquam ut maiores incidunt adipisci accusantium nostrum,
+        error tempora temporibus vero earum minus natus iste repudiandae,
+        ratione ipsam. Molestias provident nisi eaque illo obcaecati ea!
+      </p>
+    </div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><i class="fas fa-home"></i>Home</li>
+      <li><i class="fas fa-user-alt"></i>About</li>
+      <li
+        [ngStyle]="{
+          transform: navState === 'open' ? 'translateX(0)' : 'translateX(-200%)'
+        }"
+      >
+        <i class="fas fa-envelope"></i>Contact
+      </li>
+    </ul>
+  </nav>
+</div>
