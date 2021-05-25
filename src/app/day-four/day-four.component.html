@@ -1,0 +1,8 @@
+<div class="day-four-container">
+  <div class="search" [ngClass]="{ active: searchActive }">
+    <input type="text" class="search-input" placeholder="Search ..." />
+    <button class="btn" (click)="searchActive = !searchActive">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+</div>

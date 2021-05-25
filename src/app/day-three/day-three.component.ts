@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-day-three',
@@ -8,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class DayThreeComponent implements OnInit {
   navState: 'open' | 'close' = 'close';
 
-  constructor() {}
+  constructor(private readonly titleService: Title) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.titleService.setTitle('Fifty Projects - Day Threee');
+  }
 
   onOpenClick() {
     this.navState = 'open';

@@ -13,3 +13,7 @@ Progress Steps
 ## Day 3
 
 Rotating Navigation
+
+## Day 4
+
+Expandable Search Widget
