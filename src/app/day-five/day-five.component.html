@@ -1,0 +1,9 @@
+<div class="day-five-container">
+  <section
+    class="bg"
+    [ngStyle]="{ filter: 'blur(' + scale(load, 0, 100, 30, 0) + 'px)' }"
+  ></section>
+  <div class="loading-text" [ngStyle]="{ opacity: scale(load, 0, 100, 1, 0) }">
+    {{ load + "%" }}
+  </div>
+</div>

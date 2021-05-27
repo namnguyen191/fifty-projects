@@ -17,3 +17,11 @@ Rotating Navigation
 ## Day 4
 
 Expandable Search Widget
+
+## Day 5
+
+Blurry Loading
+
+## Day 6
+
+Slide-in Scroll Animation

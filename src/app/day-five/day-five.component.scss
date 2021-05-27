@@ -1,0 +1,27 @@
+.day-five-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .bg {
+    background: url("/assets/images/dark-sky-water.jpg") no-repeat center
+      center/cover;
+
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100% + 60px);
+    height: calc(100% + 60px);
+    z-index: -1;
+    filter: blur(0px);
+  }
+
+  .loading-text {
+    font-size: 3rem;
+    color: #fff;
+  }
+}
