@@ -29,3 +29,7 @@ Slide-in Scroll Animation
 ## Day 7
 
 Split Landing Page
+
+## Day 8
+
+Wavey Form

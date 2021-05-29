@@ -1,1 +1,31 @@
-<p>day-eight works!</p>
+<div class="day-eight-container">
+  <div class="form-container">
+    <h1>Please Login</h1>
+    <form>
+      <div class="form-control">
+        <input type="text" required />
+        <label>
+          <span
+            *ngFor="let letter of emailString.split(''); index as i"
+            [style.transition-delay]="i * 50 + 'ms'"
+            >{{ letter }}</span
+          >
+        </label>
+      </div>
+      <div class="form-control">
+        <input type="password" required />
+        <label>
+          <span
+            *ngFor="let letter of passwordString.split(''); index as i"
+            [style.transition-delay]="i * 50 + 'ms'"
+            >{{ letter }}</span
+          >
+        </label>
+      </div>
+
+      <button class="btn">Login</button>
+
+      <p class="text">Don't have an account? <a href="#">Register</a></p>
+    </form>
+  </div>
+</div>
