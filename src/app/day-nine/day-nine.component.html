@@ -1,0 +1,11 @@
+<div class="day-nine-container">
+  <audio #player></audio>
+
+  <div class="buttons">
+    <ng-container *ngFor="let song of playList">
+      <button class="btn" (click)="setSrcAndPlay(song.src)">
+        {{ song.title }}
+      </button>
+    </ng-container>
+  </div>
+</div>

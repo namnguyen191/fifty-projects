@@ -23,6 +23,8 @@ const routes: Routes = [
   { path: 'day-six', loadChildren: () => import('./day-six/day-six.module').then(m => m.DaySixModule) },
   { path: 'day-seven', loadChildren: () => import('./day-seven/day-seven.module').then(m => m.DaySevenModule) },
   { path: 'day-eight', loadChildren: () => import('./day-eight/day-eight.module').then(m => m.DayEightModule) },
+  { path: 'day-nine', loadChildren: () => import('./day-nine/day-nine.module').then(m => m.DayNineModule) },
+  { path: 'day-ten', loadChildren: () => import('./day-ten/day-ten.module').then(m => m.DayTenModule) },
 ];
 
 @NgModule({
