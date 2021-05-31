@@ -37,3 +37,11 @@ Wavey Form
 ## Day 9
 
 Working with Audio Element
+
+## Day 10
+
+Fetching Dad Jokes
+
+## Day 11
+
+Tracking Keyboard
