@@ -7,11 +7,14 @@ import { DayTenComponent } from './day-ten.component';
 
 @NgModule({
   declarations: [
-    DayTenComponent
+    DayTenComponent,
   ],
   imports: [
     CommonModule,
     DayTenRoutingModule
+  ],
+  providers: [
+    
   ]
 })
 export class DayTenModule { }
