@@ -45,3 +45,7 @@ Fetching Dad Jokes
 ## Day 11
 
 Tracking Keyboard
+
+## Day 12
+
+Collapsable FAQs
