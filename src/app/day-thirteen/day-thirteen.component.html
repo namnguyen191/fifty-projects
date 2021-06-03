@@ -1,0 +1,26 @@
+<div class="day-thirteen-container">
+  <div class="choice-container">
+    <h3>
+      Enter all your choices seperate by a comma. For example "choice 1, choice
+      2, ... <br />Press Enter when you're done
+    </h3>
+    <textarea
+      placeholder="Enter choices here ..."
+      id="txtarea"
+      class="txtarea"
+      #txtarea
+      cols="50"
+      rows="10"
+      spellcheck="false"
+      (keyup)="createChoicesTags()"
+      (keyup.enter)="pickRandomTags()"
+    ></textarea>
+    <div class="tags">
+      <ng-container *ngFor="let tag of tags">
+        <div class="tag" [ngClass]="{ highlight: pickedTags === tag }">
+          {{ tag }}
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

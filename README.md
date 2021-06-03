@@ -49,3 +49,7 @@ Tracking Keyboard
 ## Day 12
 
 Collapsable FAQs
+
+## Day 13
+
+Random choices generator
