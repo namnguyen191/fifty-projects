@@ -53,3 +53,7 @@ Collapsable FAQs
 ## Day 13
 
 Random choices generator
+
+## Day 14
+
+Animated Navigation
