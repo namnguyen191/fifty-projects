@@ -58,6 +58,10 @@ Random choices generator
 
 Animated Navigation
 
-# Day 15
+## Day 15
 
 Incremental Counter
+
+## Day 16
+
+Drink Water
