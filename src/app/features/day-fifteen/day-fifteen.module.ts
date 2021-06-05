@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DayFifteenRoutingModule } from './day-fifteen-routing.module';
 import { DayFifteenComponent } from './day-fifteen.component';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [DayFifteenComponent],
