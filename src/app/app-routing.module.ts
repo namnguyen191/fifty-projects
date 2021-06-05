@@ -29,6 +29,7 @@ const routes: Routes = [
   { path: 'day-twelve', loadChildren: () => import('./day-twelve/day-twelve.module').then(m => m.DayTwelveModule) },
   { path: 'day-thirteen', loadChildren: () => import('./day-thirteen/day-thirteen.module').then(m => m.DayThirteenModule) },
   { path: 'day-fourteen', loadChildren: () => import('./day-fourteen/day-fourteen.module').then(m => m.DayFourteenModule) },
+  { path: 'day-fifteen', loadChildren: () => import('./day-fifteen/day-fifteen.module').then(m => m.DayFifteenModule) },
 ];
 
 @NgModule({
