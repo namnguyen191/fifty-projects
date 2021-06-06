@@ -103,6 +103,7 @@ const routes: Routes = [
         (m) => m.DayFifteenModule
       ),
   },
+  { path: 'day-sixteen', loadChildren: () => import('./features/day-sixteen/day-sixteen.module').then(m => m.DaySixteenModule) },
 ];
 
 @NgModule({
