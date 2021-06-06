@@ -1,4 +1,4 @@
-import { Directive, ElementRef, OnInit } from '@angular/core';
+import { Directive, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { interval } from 'rxjs';
 import { finalize, takeWhile, tap } from 'rxjs/operators';
 
@@ -6,7 +6,10 @@ import { finalize, takeWhile, tap } from 'rxjs/operators';
   selector: '[appIncreAni]',
 })
 export class IncreAniDirective implements OnInit {
-  constructor(private el: ElementRef<HTMLDivElement>) {}
+  constructor(
+    private el: ElementRef<HTMLDivElement>,
+    private renderer: Renderer2
+  ) {}
   ngOnInit(): void {
     const targetValue = parseInt(this.el.nativeElement.innerHTML);
     const duration = 5000; // 5s
@@ -21,10 +24,20 @@ export class IncreAniDirective implements OnInit {
           console.log(currentValue);
 
           currentValue += increVal;
-          this.el.nativeElement.innerHTML = currentValue.toString();
+          this.renderer.setProperty(
+            this.el.nativeElement,
+            'innerHTML',
+            currentValue.toString()
+          );
+          // this.el.nativeElement.innerHTML = currentValue.toString();
         }),
         finalize(() => {
-          this.el.nativeElement.innerHTML = targetValue.toString();
+          this.renderer.setProperty(
+            this.el.nativeElement,
+            'innerHTML',
+            targetValue.toString()
+          );
+          // this.el.nativeElement.innerHTML = targetValue.toString();
         })
       )
       .subscribe();
