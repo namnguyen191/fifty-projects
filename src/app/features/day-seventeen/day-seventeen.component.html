@@ -1,0 +1,41 @@
+<div class="day-seventeen-container">
+  <header>
+    <div class="form">
+      <input
+        #search
+        (keyup.enter)="searchMovies(search.value)"
+        type="text"
+        class="search"
+        placeholder="Search..."
+      />
+    </div>
+  </header>
+
+  <div class="main">
+    <ng-container *ngFor="let movie of movies">
+      <div class="movie">
+        <img
+          [src]="MOVIE_DB_IMG_URL + movie.poster_path"
+          [alt]="movie.original_title + 'Movie Poster'"
+        />
+        <div class="movie-info">
+          <h3 class="movie-title">{{ movie.original_title }}</h3>
+          <span
+            [ngClass]="{
+              green: movie.vote_average >= 8,
+              orange: movie.vote_average >= 5 && movie.vote_average < 8,
+              red: movie.vote_average < 5
+            }"
+            >{{ movie.vote_average }}</span
+          >
+        </div>
+        <div class="overview">
+          <h3>Overview</h3>
+          <p>
+            {{ movie.overview }}
+          </p>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
