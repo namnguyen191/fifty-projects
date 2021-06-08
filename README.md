@@ -69,3 +69,7 @@ Drink Water
 ## Day 17
 
 Movies Posters
+
+## Day 18
+
+Backgrounds Slider

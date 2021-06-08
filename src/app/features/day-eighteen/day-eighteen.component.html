@@ -1,0 +1,20 @@
+<div
+  class="day-eighteen-container"
+  [ngStyle]="{ 'background-image': 'url(' + backgrounds[activeIndex] + ')' }"
+>
+  <div class="slider-container">
+    <ng-container *ngFor="let background of backgrounds; index as i">
+      <div
+        class="slide"
+        [class.active]="i === activeIndex"
+        [ngStyle]="{ 'background-image': 'url(' + background + ')' }"
+      ></div>
+    </ng-container>
+    <button class="arrow left-arrow" (click)="changeSlide('left')">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <button class="arrow right-arrow" (click)="changeSlide('right')">
+      <i class="fas fa-arrow-right"></i>
+    </button>
+  </div>
+</div>
