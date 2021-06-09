@@ -1,0 +1,20 @@
+<div class="day-nineteen-container" [class.dark]="mode === 'dark'">
+  <button class="toggle" (click)="changeMode()">
+    {{ mode === "light" ? "Light Mode" : "Dark Mode" }}
+  </button>
+
+  <div class="clock-container">
+    <div class="clock">
+      <div #needleHour class="needle hour"></div>
+      <div #needleMinute class="needle minute"></div>
+      <div #needleSecond class="needle second"></div>
+      <div class="center-point"></div>
+    </div>
+
+    <div class="time">{{ today | date: "hh:mm" }}</div>
+    <div class="date">
+      {{ today | date: "EEEE" }}, {{ today | date: "MMMM" }}
+      <span class="circle">{{ today.getDate() }}</span>
+    </div>
+  </div>
+</div>
