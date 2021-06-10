@@ -1,0 +1,21 @@
+<div class="day-twenty-one-container">
+  <ng-container *ngFor="let box of boxes; index as i">
+    <div
+      class="box"
+      [class.hovered]="box.hover"
+      (dragover)="dragOver($event)"
+      (dragenter)="dragEnter($event, i)"
+      (dragleave)="dragLeave($event, i)"
+      (drop)="dragDrop($event, i)"
+    >
+      <div
+        *ngIf="box.active"
+        class="fill"
+        [class.hold]="box.hold"
+        draggable="true"
+        (dragstart)="dragStart($event, i)"
+        (dragend)="dragEnd($event, i)"
+      ></div>
+    </div>
+  </ng-container>
+</div>

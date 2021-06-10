@@ -1,0 +1,40 @@
+.day-twenty-one-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(241, 53%, 52%);
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+
+  .box {
+    min-height: 150px;
+    min-width: 150px;
+    margin: 10px;
+    border: 3px solid hsl(0, 0%, 0%);
+    background-color: #fff;
+
+    .fill {
+      background-image: url("https://picsum.photos/150");
+      height: 145px;
+      width: 145px;
+      cursor: pointer;
+
+      &.hold {
+        border: solid 5px hsl(0, 0%, 80%);
+      }
+
+      &.invisible {
+        opacity: 0;
+      }
+    }
+
+    &.hovered {
+      background-color: hsl(0, 0%, 20%);
+      border-color: hsl(0, 0%, 100%);
+      border-style: dashed;
+    }
+  }
+}
