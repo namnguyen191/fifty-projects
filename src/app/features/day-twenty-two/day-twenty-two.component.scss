@@ -1,0 +1,41 @@
+.day-twenty-two-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 96%);
+
+  .canvas {
+    border: 2px solid hsl(207, 44%, 49%);
+  }
+
+  .toolbox {
+    background-color: hsl(207, 44%, 49%);
+    border: 1px solid hsl(248, 53%, 58%);
+    display: flex;
+    width: 804px;
+    padding: 1rem;
+
+    & > * {
+      background-color: hsl(0, 0%, 100%);
+      border: none;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      height: 50px;
+      width: 50px;
+      margin: 0.25rem;
+      padding: 0.25rem;
+
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+
+    button {
+      cursor: pointer;
+    }
+  }
+}

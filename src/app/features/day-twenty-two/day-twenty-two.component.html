@@ -1,0 +1,23 @@
+<div class="day-twenty-two-container">
+  <canvas
+    #canvas
+    class="canvas"
+    (mouseup)="onMouseUp()"
+    (mousedown)="onMouseDown($event)"
+    (mousemove)="onMouseMove($event)"
+    width="800"
+    height="800"
+  ></canvas>
+  <div class="toolbox">
+    <button class="decrease" (click)="size = size - 1">-</button>
+    <span class="size">{{ size }}</span>
+    <button class="increase" (click)="size = size + 1">+</button>
+    <input
+      type="color"
+      class="color"
+      (change)="onChangeColor($event)"
+      [value]="color"
+    />
+    <button class="clear" (click)="clearCanvas()">X</button>
+  </div>
+</div>
