@@ -89,3 +89,7 @@ Drag N Drop
 ## Day 22
 
 HTML Canvas
+
+## Day 23
+
+Kinetic CSS Loader
