@@ -48,7 +48,7 @@ Tracking Keyboard
 
 ## Day 12
 
-Collapsable FAQs
+Collapsible FAQs
 
 ## Day 13
 
@@ -93,3 +93,7 @@ HTML Canvas
 ## Day 23
 
 Kinetic CSS Loader
+
+## Day 24
+
+Loader Placeholder
