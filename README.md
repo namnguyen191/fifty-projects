@@ -97,3 +97,7 @@ Kinetic CSS Loader
 ## Day 24
 
 Loader Placeholder
+
+## Day 25
+
+Sticky Navbar
