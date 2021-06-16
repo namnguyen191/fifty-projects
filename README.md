@@ -101,3 +101,7 @@ Loader Placeholder
 ## Day 25
 
 Sticky Navbar
+
+## Day 26
+
+2-way Veritcal Slider

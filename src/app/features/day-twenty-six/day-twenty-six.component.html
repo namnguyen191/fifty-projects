@@ -1,0 +1,32 @@
+<div class="day-twenty-six-container">
+  <div class="slider-container">
+    <div
+      class="left-slide"
+      [style.top]="(menuItem.length - 1) * -100 + 'vh'"
+      [style.transform]="'translateY(' + activeSlideIndex * 100 + 'vh)'"
+    >
+      <ng-container *ngFor="let item of menuItem">
+        <div [style.background-color]="item.themeColor">
+          <h1>{{ item.headLine }}</h1>
+          <p>{{ item.text }}</p>
+        </div>
+      </ng-container>
+    </div>
+    <div
+      class="right-slide"
+      [style.transform]="'translateY(' + activeSlideIndex * -100 + 'vh)'"
+    >
+      <ng-container *ngFor="let item of menuItem.reverse()">
+        <div [style.background-image]="'url(' + item.imgUrl + ')'"></div>
+      </ng-container>
+    </div>
+    <div class="action-buttons">
+      <button class="down-button" (click)="changeSlide('down')">
+        <i class="fas fa-arrow-down"></i>
+      </button>
+      <button class="up-button" (click)="changeSlide('up')">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+  </div>
+</div>
