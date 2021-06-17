@@ -114,6 +114,7 @@ const routes: Routes = [
   { path: 'day-twenty-four', loadChildren: () => import('./features/day-twenty-four/day-twenty-four.module').then(m => m.DayTwentyFourModule) },
   { path: 'day-twenty-five', loadChildren: () => import('./features/day-twenty-five/day-twenty-five.module').then(m => m.DayTwentyFiveModule) },
   { path: 'day-twenty-six', loadChildren: () => import('./features/day-twenty-six/day-twenty-six.module').then(m => m.DayTwentySixModule) },
+  { path: 'day-twenty-seven', loadChildren: () => import('./features/day-twenty-seven/day-twenty-seven.module').then(m => m.DayTwentySevenModule) },
 ];
 
 @NgModule({

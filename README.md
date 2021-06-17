@@ -105,3 +105,7 @@ Sticky Navbar
 ## Day 26
 
 2-way Veritcal Slider
+
+## Day 27
+
+Toast Notification

@@ -2,10 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { IncreAniDirective } from './incre-ani.directive';
+import { ToastDirective } from './toast.directive';
 
 @NgModule({
-  declarations: [ProjectCardComponent, IncreAniDirective],
+  declarations: [ProjectCardComponent, IncreAniDirective, ToastDirective],
   imports: [CommonModule],
-  exports: [ProjectCardComponent, CommonModule, IncreAniDirective],
+  exports: [
+    ProjectCardComponent,
+    CommonModule,
+    IncreAniDirective,
+    ToastDirective,
+  ],
 })
 export class SharedModule {}
