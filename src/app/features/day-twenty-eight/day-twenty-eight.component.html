@@ -1,0 +1,34 @@
+<div class="day-twenty-eight-container" *ngIf="data | async as usrInfo">
+  <form class="user-form" (submit)="searchForUser($event, userInput.value)">
+    <input #userInput type="text" placeholder="Search a github user" />
+  </form>
+
+  <main>
+    <div class="card">
+      <div>
+        <img
+          [src]="usrInfo.user.avatar_url"
+          [alt]="'User ' + usrInfo.user.name + ' avatar'"
+          class="avatar"
+        />
+      </div>
+      <div class="user-info">
+        <h2>{{ usrInfo.user.name }}</h2>
+        <p>
+          {{ usrInfo.user.bio }}
+        </p>
+        <ul>
+          <li>{{ usrInfo.user.followers }} <strong>Followers</strong></li>
+          <li>{{ usrInfo.user.following }} <strong>Following</strong></li>
+          <li>{{ usrInfo.user.public_repos }} <strong>Repos</strong></li>
+        </ul>
+
+        <div class="repos">
+          <ng-container *ngFor="let repo of usrInfo.repos">
+            <a [href]="repo.html_url" class="repo-link">{{ repo.name }}</a>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
