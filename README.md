@@ -113,3 +113,7 @@ Toast Notification
 ## Day 28
 
 Github Profile Card
+
+## Day 29
+
+Custom double-click with :heartpulse:
