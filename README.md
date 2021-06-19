@@ -117,3 +117,7 @@ Github Profile Card
 ## Day 29
 
 Custom double-click with :heartpulse:
+
+## Day 30
+
+Auto Text Effect
