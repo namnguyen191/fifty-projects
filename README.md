@@ -121,3 +121,7 @@ Custom double-click with :heartpulse:
 ## Day 30
 
 Auto Text Effect
+
+## Day 31
+
+Password Generator

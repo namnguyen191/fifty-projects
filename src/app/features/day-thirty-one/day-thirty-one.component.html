@@ -1,0 +1,68 @@
+<div class="container">
+  <h2>Password Generator</h2>
+  <div class="result-container">
+    <span class="result">{{ genePass }}</span>
+    <button class="btn" (click)="copyToClipboard()">
+      <i class="far fa-clipboard"></i>
+    </button>
+  </div>
+
+  <div class="settings">
+    <div class="setting">
+      <label for="length">Password Length</label>
+      <input
+        type="number"
+        id="length"
+        min="4"
+        max="20"
+        [value]="passwordOptions.length"
+        #length
+        (change)="passwordOptions.length = +length.value"
+      />
+    </div>
+    <div class="setting">
+      <label for="upper-letter">Include uppercase letters</label>
+      <input
+        type="checkbox"
+        id="upper-letter"
+        [checked]="passwordOptions.includeUpperCase"
+        #upperCase
+        (change)="passwordOptions.includeUpperCase = upperCase.checked"
+      />
+    </div>
+    <div class="setting">
+      <label for="lower-letter">Include lowercase letters</label>
+      <input
+        type="checkbox"
+        id="lower-letter"
+        [checked]="passwordOptions.includeLowerCase"
+        #lowerCase
+        (change)="passwordOptions.includeLowerCase = lowerCase.checked"
+      />
+    </div>
+    <div class="setting">
+      <label for="num">Include numbers</label>
+      <input
+        type="checkbox"
+        id="num"
+        [checked]="passwordOptions.includeNum"
+        #num
+        (change)="passwordOptions.includeNum = num.checked"
+      />
+    </div>
+    <div class="setting">
+      <label for="symbol">Include symbols</label>
+      <input
+        type="checkbox"
+        id="symbol"
+        [checked]="passwordOptions.includeSym"
+        #sym
+        (change)="passwordOptions.includeSym = sym.checked"
+      />
+    </div>
+  </div>
+
+  <button class="btn btn-large" (click)="generatePassword()">
+    Generate Password
+  </button>
+</div>
