@@ -125,3 +125,7 @@ Auto Text Effect
 ## Day 31
 
 Password Generator
+
+## Day 32
+
+Slider toggle buttons
