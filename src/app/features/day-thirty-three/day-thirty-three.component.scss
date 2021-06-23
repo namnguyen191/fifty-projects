@@ -1,0 +1,65 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+  background-color: #7bdaf3;
+  min-height: 100vh;
+
+  .add {
+    position: fixed;
+    top: 3.2rem;
+    right: 1rem;
+    background-color: #9ec862;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .note {
+    background-color: #fff;
+    box-shadow: 0 0 10px 4px rgba($color: #000000, $alpha: 0.1);
+    margin: 30px 20px;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+
+    aspect-ratio: 1 / 1;
+
+    .tools {
+      background-color: #9ec862;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.5rem;
+
+      button {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-left: 0.5rem;
+      }
+    }
+
+    textarea {
+      outline: none;
+      font-size: 1.2rem;
+      border: none;
+      padding: 20px;
+      resize: none;
+      flex-grow: 1;
+    }
+
+    .main {
+      padding: 20px;
+      flex-grow: 1;
+      overflow: scroll;
+    }
+
+    .hidden {
+      display: none;
+    }
+  }
+}

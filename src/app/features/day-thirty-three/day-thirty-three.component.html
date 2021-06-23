@@ -1,0 +1,29 @@
+<button class="add" (click)="addNote('')">
+  <i class="fas fa-plus"></i> Add Note
+</button>
+
+<ng-container *ngFor="let note of notes; index as i">
+  <div class="note">
+    <div class="tools">
+      <button class="edit" (click)="toggleMode(note)">
+        <i class="fas fa-edit"></i>
+      </button>
+      <button class="delete" (click)="removeNote(i)">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </div>
+
+    <div
+      #main
+      class="main"
+      [class.hidden]="note.mode === 'edit'"
+      [innerHTML]="markedFn(note.text)"
+    ></div>
+    <textarea
+      #textArea
+      [class.hidden]="note.mode === 'view'"
+      [value]="note.text"
+      (keyup)="note.text = textArea.value"
+    ></textarea>
+  </div>
+</ng-container>

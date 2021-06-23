@@ -129,3 +129,7 @@ Password Generator
 ## Day 32
 
 Slider toggle buttons
+
+## Day 33
+
+Note taking app
