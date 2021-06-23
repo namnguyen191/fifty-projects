@@ -1,0 +1,18 @@
+<div class="counter" [class.hide]="nums.length === activeInIndex">
+  <div class="nums">
+    <ng-container *ngFor="let num of nums; index as i">
+      <span
+        [class.in]="i === activeInIndex"
+        [class.out]="i === activeOutIndex"
+        (animationend)="runAnimation($event)"
+        >{{ num }}</span
+      >
+    </ng-container>
+  </div>
+  <h4>Get Ready</h4>
+</div>
+
+<div class="final" [class.show]="nums.length === activeInIndex">
+  <h1>GO</h1>
+  <button (click)="reset()">Replay</button>
+</div>
