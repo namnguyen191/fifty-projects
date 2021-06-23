@@ -3,7 +3,7 @@
 </button>
 
 <ng-container *ngFor="let note of notes; index as i">
-  <div class="note">
+  <div class="note" [@fadeInOut]>
     <div class="tools">
       <button class="edit" (click)="toggleMode(note)">
         <i class="fas fa-edit"></i>

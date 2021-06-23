@@ -1,3 +1,10 @@
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import * as marked from 'marked';
@@ -11,6 +18,24 @@ interface Note {
   selector: 'app-day-thirty-three',
   templateUrl: './day-thirty-three.component.html',
   styleUrls: ['./day-thirty-three.component.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      state(
+        'void',
+        style({
+          opacity: 0,
+        })
+      ),
+      state(
+        '*',
+        style({
+          opacity: 1,
+        })
+      ),
+      transition(':enter', animate('600ms ease-in')),
+      transition(':leave', animate('600ms ease-out')),
+    ]),
+  ],
 })
 export class DayThirtyThreeComponent implements OnInit {
   @ViewChild('textArea') txtArea?: ElementRef<HTMLTextAreaElement>;
