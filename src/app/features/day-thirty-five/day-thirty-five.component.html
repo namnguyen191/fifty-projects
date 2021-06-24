@@ -1,0 +1,16 @@
+<div class="carousel">
+  <div
+    class="image-container"
+    #gallery
+    [style.transform]="'translateX(-' + 500 * currentIndex + 'px)'"
+  >
+    <ng-container *ngFor="let image of images">
+      <img [src]="image.url" [alt]="image.alt" />
+    </ng-container>
+  </div>
+
+  <div class="buttons-container">
+    <button class="left" (click)="changeSlide('prev')">Prev</button>
+    <button class="right" (click)="changeSlide('next')">Next</button>
+  </div>
+</div>
