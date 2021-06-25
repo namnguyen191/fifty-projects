@@ -28,6 +28,11 @@ export class DayThirtySixComponent implements OnInit {
       '#' + Math.floor(Math.random() * 16777215).toString(16);
 
     this.renderer.setStyle(square, 'background-color', randomColor);
+    this.renderer.setStyle(
+      square,
+      'box-shadow',
+      `0 0 2px ${randomColor}, 0 0 10px ${randomColor}`
+    );
   }
 
   returnToOriginalColor(event: MouseEvent) {
@@ -35,6 +40,7 @@ export class DayThirtySixComponent implements OnInit {
 
     setTimeout(() => {
       this.renderer.setStyle(square, 'background-color', this.DEFAULT_COLOR);
+      this.renderer.setStyle(square, 'box-shadow', 'none');
     }, 1000);
   }
 }
