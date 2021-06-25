@@ -1,0 +1,10 @@
+<div class="container">
+  <ng-container *ngFor="let square of squaresNum">
+    <div
+      class="square"
+      [style.backgroundColor]="square"
+      (mouseover)="changeColor($event)"
+      (mouseleave)="returnToOriginalColor($event)"
+    ></div>
+  </ng-container>
+</div>

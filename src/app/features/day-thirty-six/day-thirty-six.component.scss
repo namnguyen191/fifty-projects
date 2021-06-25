@@ -1,0 +1,21 @@
+:host {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    cursor: pointer;
+
+    .square {
+      height: 15px;
+      width: 15px;
+      margin: 2px;
+      transition: 0.2s ease;
+    }
+  }
+}
