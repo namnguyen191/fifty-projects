@@ -1,0 +1,50 @@
+<div class="phone">
+  <img
+    src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+    alt="Home"
+    class="content"
+    [class.show]="activeItem === 'home'"
+  />
+  <img
+    src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+    alt="Work"
+    class="content"
+    [class.show]="activeItem === 'work'"
+  />
+  <img
+    src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1504&q=80"
+    alt="Blog"
+    class="content"
+    [class.show]="activeItem === 'blog'"
+  />
+  <img
+    src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+    alt="About"
+    class="content"
+    [class.show]="activeItem === 'about'"
+  />
+
+  <nav>
+    <ul>
+      <li [class.active]="activeItem === 'home'" (click)="activeItem = 'home'">
+        <i class="fas fa-home"></i>
+        <p>Home</p>
+      </li>
+      <li [class.active]="activeItem === 'work'" (click)="activeItem = 'work'">
+        <i class="fas fa-box"></i>
+        <p>Work</p>
+      </li>
+      <li [class.active]="activeItem === 'blog'" (click)="activeItem = 'blog'">
+        <i class="fas fa-book-open"></i>
+        <p>Blog</p>
+      </li>
+      <li
+        [class.active]="activeItem === 'about'"
+        (click)="activeItem = 'about'"
+      >
+        <i class="fas fa-user"></i>
+        <p>About Us</p>
+      </li>
+    </ul>
+  </nav>
+</div>
