@@ -1,0 +1,29 @@
+<h1>Pokedex</h1>
+<div class="poke-container">
+  <ng-container *ngFor="let poke of pokemons">
+    <div
+      class="pokemon"
+      [style.backgroundColor]="getColorBaseOnPokeType(poke.type)"
+    >
+      <div class="img-container">
+        <img
+          [src]="
+            'https://pokeres.bastionbot.org/images/pokemon/' +
+            poke.index +
+            '.png'
+          "
+          [alt]="poke.name"
+        />
+      </div>
+      <div class="info">
+        <span class="number"
+          >#{{ poke.index.toString().padStart(3, "0") }}</span
+        >
+        <h3 class="name">{{ poke.name }}</h3>
+        <small class="type"
+          >Type: <span>{{ poke.type }}</span></small
+        >
+      </div>
+    </div>
+  </ng-container>
+</div>
