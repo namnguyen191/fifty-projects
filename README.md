@@ -153,3 +153,7 @@ Pokedex
 ## Day 38
 
 Mobile Tab Navigation
+
+## Day 39
+
+Password Strength Background
