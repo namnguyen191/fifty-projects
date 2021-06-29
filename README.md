@@ -157,3 +157,7 @@ Mobile Tab Navigation
 ## Day 39
 
 Password Strength Background
+
+## Day 40
+
+3D Background Boxes

@@ -1,0 +1,12 @@
+<button class="magic" (click)="boxes.classList.toggle('big')">Magic</button>
+
+<div #boxes class="boxes">
+  <ng-container *ngFor="let row of grid; index as r">
+    <ng-container *ngFor="let col of row; index as c">
+      <div
+        class="box"
+        [style.backgroundPosition]="-125 * c + 'px ' + -125 * r + 'px'"
+      ></div>
+    </ng-container>
+  </ng-container>
+</div>
