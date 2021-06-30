@@ -161,3 +161,7 @@ Password Strength Background
 ## Day 40
 
 3D Background Boxes
+
+## Day 41
+
+Enter Your Verification Codes UI
