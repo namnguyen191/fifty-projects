@@ -1,0 +1,25 @@
+<div class="container">
+  <header class="header">
+    <h4 class="title">Live Users Filter</h4>
+    <small class="subtitle">Search by name and/or location</small>
+    <input type="text" placeholder="Search..." (input)="filterData($event)" />
+  </header>
+
+  <ul class="user-list">
+    <ng-container *ngFor="let user of users">
+      <li *ngIf="user.display === 'show'">
+        <img
+          [src]="user.picture.thumbnail"
+          [alt]="user.name.first + ' picture'"
+        />
+        <div class="user-info">
+          <h4>{{ user.name.first + " " + user.name.last }}</h4>
+          <p>{{ user.location.city + ", " + user.location.state }}</p>
+        </div>
+      </li>
+    </ng-container>
+    <li>
+      <h3>Loading...</h3>
+    </li>
+  </ul>
+</div>
