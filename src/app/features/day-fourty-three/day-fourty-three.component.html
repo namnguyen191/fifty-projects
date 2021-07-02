@@ -1,0 +1,30 @@
+<div class="panel-container">
+  <ng-container *ngIf="!submitted; else afterSubmit">
+    <strong
+      >How satisfied are you with our <br />
+      customer support performance</strong
+    >
+    <div class="ratings-container">
+      <ng-container *ngFor="let rating of ratings; index as i">
+        <div
+          class="rating"
+          [class.active]="i === selectedIndex"
+          (click)="selectedIndex = i"
+        >
+          <img [src]="rating.icon" [alt]="rating.value + ' Icon'" />
+          <small>{{ rating.value }}</small>
+        </div>
+      </ng-container>
+    </div>
+
+    <button class="btn" (click)="submitted = true">Send Review</button>
+  </ng-container>
+</div>
+
+<ng-template #afterSubmit>
+  <i class="fas fa-heart"></i>
+  <strong>Thank You!</strong>
+  <br />
+  <strong>Feedback: {{ ratings[selectedIndex].value }}</strong>
+  <p>We'll use your feedback to improve our customer support</p>
+</ng-template>
