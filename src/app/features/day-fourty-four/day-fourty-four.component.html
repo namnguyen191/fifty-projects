@@ -1,0 +1,12 @@
+<h2>Custom Range Slider</h2>
+<div class="range-container">
+  <input
+    (input)="onChange($event)"
+    id="range"
+    type="range"
+    min="0"
+    max="100"
+    [value]="rangeValue"
+  />
+  <label for="range" [style.left]="rangeValue + '%'">{{ rangeValue }}</label>
+</div>

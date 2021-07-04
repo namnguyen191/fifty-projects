@@ -173,3 +173,7 @@ Live User Filter
 ## Day 43
 
 Feedback UI Design
+
+## Day 44
+
+Custom Range Slider
