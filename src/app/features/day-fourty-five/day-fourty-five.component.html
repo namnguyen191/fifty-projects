@@ -1,0 +1,53 @@
+<button class="nav-btn open-btn" (click)="visible = true">
+  <i class="fas fa-bars"></i>
+</button>
+
+<div class="nav nav-black" [class.visible]="visible">
+  <div class="nav nav-red" [class.visible]="visible">
+    <div class="nav nav-white" [class.visible]="visible">
+      <button class="nav-btn close-btn" (click)="visible = false">
+        <i class="fas fa-times"></i>
+      </button>
+      <img
+        src="https://assets.brand.microsites.netflix.io/assets/5a5c367c-8198-11e9-bf79-066b49664af6_cm_800w.png?v=32"
+        alt="Logo"
+        class="logo"
+      />
+      <ul class="list">
+        <li>
+          <a href="#">Teams</a>
+        </li>
+        <li>
+          <a href="#">Locations</a>
+        </li>
+        <li>
+          <a href="#">Life at Netflix</a>
+        </li>
+        <li>
+          <ul>
+            <li>
+              <a href="#">Netflix culture memo</a>
+            </li>
+            <li>
+              <a href="#">Work life balance</a>
+            </li>
+            <li>
+              <a href="#">Inclusion and diversity</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<img
+  src="https://assets.brand.microsites.netflix.io/assets/5a5c367c-8198-11e9-bf79-066b49664af6_cm_800w.png?v=32"
+  alt="Logo"
+  class="logo"
+/>
+
+<div class="text">Mobile Navigation</div>
