@@ -1,0 +1,9 @@
+<h1 class="title">Random Image Feed</h1>
+
+<div class="container">
+  <ng-container *ngFor="let row of [].constructor(rows)">
+    <img [src]="UNSPLASH_URL + getRandomSize()" alt="Random image" />
+    <img [src]="UNSPLASH_URL + getRandomSize()" alt="Random image" />
+    <img [src]="UNSPLASH_URL + getRandomSize()" alt="Random image" />
+  </ng-container>
+</div>

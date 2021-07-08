@@ -189,3 +189,7 @@ Quiz App
 ## Day 47
 
 Testimonial Box Switcher
+
+## Day 48
+
+Random Image Feed
