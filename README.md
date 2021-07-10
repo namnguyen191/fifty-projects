@@ -193,3 +193,11 @@ Testimonial Box Switcher
 ## Day 48
 
 Random Image Feed
+
+## Day 49
+
+TODOs List
+
+## Day 50
+
+Squash the insect game

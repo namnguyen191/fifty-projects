@@ -1,0 +1,27 @@
+<h1>todos</h1>
+<form (submit)="addTodo($event, todoInput)">
+  <input
+    type="text"
+    class="input"
+    placeholder="Enter your todo"
+    autocomplete="off"
+    #todoInput
+  />
+
+  <ul class="todos" *ngIf="todos.length > 0">
+    <ng-container *ngFor="let todo of todos; index as i">
+      <li
+        (click)="todoOnLeftClick($event)"
+        (contextmenu)="todoOnRightClick($event, i)"
+      >
+        {{ todo.value }}
+      </li>
+    </ng-container>
+  </ul>
+</form>
+
+<small>
+  Left click to toggle completed
+  <br />
+  Right click to delete todo
+</small>

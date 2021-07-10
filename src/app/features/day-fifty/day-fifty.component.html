@@ -1,0 +1,38 @@
+<div class="screen" *ngIf="screen === 'welcome'">
+  <h1>Catch The Insect</h1>
+  <button class="btn" (click)="screen = 'menu'">Play Game</button>
+</div>
+
+<div class="screen" *ngIf="screen === 'menu'">
+  <h1>What is your "favorite" insect?</h1>
+  <ul class="insects">
+    <ng-container *ngFor="let insect of insects">
+      <li>
+        <button class="choose-insect-btn" (click)="startGame(insect.img)">
+          <p>{{ insect.name }}</p>
+          <img [src]="insect.img" [alt]="insect.name" />
+        </button>
+      </li>
+    </ng-container>
+  </ul>
+</div>
+
+<div class="screen game-container" *ngIf="screen === 'game'">
+  <h3 #time class="time">Time: 00:00</h3>
+  <h3 class="score">Score: {{ score }}</h3>
+  <h5 class="message" [class.visible]="score > 20">
+    Are you scared yet? <br />It's just imposible to kill them all
+  </h5>
+
+  <ng-container *ngFor="let ins of insectsToDisplay; index as i">
+    <div
+      class="insect"
+      (click)="squash(i)"
+      [style.top]="ins.y"
+      [style.left]="ins.x"
+      [class.squashed]="ins.squashed"
+    >
+      <img [style.transform]="'rotate(' + ins.rot + ')'" [src]="chosenInsect" />
+    </div>
+  </ng-container>
+</div>
