@@ -1,5 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { HoldState } from 'src/app/shared/holdable.directive';
 
 @Component({
   selector: 'app-day-fourty-nine',
@@ -7,6 +8,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./day-fourty-nine.component.scss'],
 })
 export class DayFourtyNineComponent implements OnInit {
+  readonly HOLD_TO_DELETE_TIME = 2000;
   todos: { value: string }[] = [];
 
   constructor(private titleService: Title, private renderer: Renderer2) {}
@@ -40,5 +42,21 @@ export class DayFourtyNineComponent implements OnInit {
     event.preventDefault();
     this.todos.splice(index, 1);
     localStorage.setItem('todosList', JSON.stringify(this.todos));
+  }
+
+  holdTimeHandler(holdTime: number, el: HTMLLIElement, index: number) {
+    const opa = 1 - (1 / this.HOLD_TO_DELETE_TIME) * holdTime;
+    this.renderer.setStyle(el, 'opacity', opa);
+
+    if (holdTime === this.HOLD_TO_DELETE_TIME) {
+      this.todos.splice(index, 1);
+      localStorage.setItem('todosList', JSON.stringify(this.todos));
+    }
+  }
+
+  holdStateHandler(state: HoldState, el: HTMLLIElement) {
+    if (state === 'leave') {
+      this.renderer.setStyle(el, 'opacity', 1);
+    }
   }
 }

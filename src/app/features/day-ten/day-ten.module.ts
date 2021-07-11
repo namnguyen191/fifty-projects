@@ -4,17 +4,8 @@ import { CommonModule } from '@angular/common';
 import { DayTenRoutingModule } from './day-ten-routing.module';
 import { DayTenComponent } from './day-ten.component';
 
-
 @NgModule({
-  declarations: [
-    DayTenComponent,
-  ],
-  imports: [
-    CommonModule,
-    DayTenRoutingModule
-  ],
-  providers: [
-    
-  ]
+  declarations: [DayTenComponent],
+  imports: [CommonModule, DayTenRoutingModule],
 })
-export class DayTenModule { }
+export class DayTenModule {}

@@ -11,8 +11,13 @@
   <ul class="todos" *ngIf="todos.length > 0">
     <ng-container *ngFor="let todo of todos; index as i">
       <li
+        #todoLi
         (click)="todoOnLeftClick($event)"
         (contextmenu)="todoOnRightClick($event, i)"
+        appHoldable
+        [appHoldableTimingPrecision]="100"
+        (holdTime)="holdTimeHandler($event, todoLi, i)"
+        (holdState)="holdStateHandler($event, todoLi)"
       >
         {{ todo.value }}
       </li>
@@ -23,5 +28,5 @@
 <small>
   Left click to toggle completed
   <br />
-  Right click to delete todo
+  Right click or hold left click for {{ HOLD_TO_DELETE_TIME / 1000 }}s to delete
 </small>
