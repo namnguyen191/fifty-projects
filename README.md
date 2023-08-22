@@ -203,3 +203,14 @@ TODOs List
 ## Day 50
 
 Squash the insect game
+
+***MetaData***
+```
+{
+  "title": "50 Angular Projects",
+  "imgUrl": "[https://raw.githubusercontent.com/namnguyen191/react-video-player/main/public/main.svg](https://github.com/namnguyen191/fifty-projects/blob/master/src/assets/images/cool-fish.jpg?raw=true)",
+  "stacks": ["angular", "scss", "typescript", "css-animation"],
+  "primaryColor": "#f0190a"
+}
+```
+***MetaData***
